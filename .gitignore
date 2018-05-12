@@ -1,0 +1,27 @@
+# Generated files
+target/
+build/
+bin/
+.gradle/
+*.class
+dist/
+out/
+
+# Eclipse project files
+.classpath
+.project
+.settings/
+test-output/
+
+# NetBeans project files
+.nb-gradle/
+.nb-gradle-properties
+nb-configuration.xml
+nbactions.xml
+
+# Idea project files
+.idea/
+/*.iml
+
+# macOS files
+.DS_Store
