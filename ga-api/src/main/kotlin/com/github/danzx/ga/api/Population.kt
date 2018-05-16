@@ -1,6 +1,7 @@
 package com.github.danzx.ga.api
 
 import com.github.danzx.ga.api.util.random
+
 import java.util.SortedMap
 import java.util.TreeMap
 

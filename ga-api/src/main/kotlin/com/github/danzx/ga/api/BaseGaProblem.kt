@@ -1,7 +1,8 @@
 package com.github.danzx.ga.api
 
+import com.github.danzx.ga.api.Population.Half.BOTTOM
+import com.github.danzx.ga.api.Population.Half.TOP
 import com.github.danzx.ga.api.util.loggerFor
-import com.github.danzx.ga.api.Population.Half.*
 
 abstract class BaseGaProblem<C: Chromosome<*>>(private val parameters: GaParameters<Population<C>>) {
 
