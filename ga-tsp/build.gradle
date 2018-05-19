@@ -1,3 +1,5 @@
+mainClassName = 'com.github.danzx.ga.tsp.TSPKt'
+
 dependencies {
     compile project(':ga-api')
 }

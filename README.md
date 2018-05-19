@@ -23,8 +23,16 @@ The API is is located at [ga-api directory](ga-api)
 Implemented examples
 --------------------
 
-* Traveling Salesman Problem (TSP) is located at [ga-tsp directory](ga-tsp)
-* Knapsack Problem (KP) is located at [ga-kp directory](ga-kp)
+* Traveling Salesman Problem (TSP) is located at [ga-tsp directory](ga-tsp/README.md)
+    - Run with:
+    ```sh
+    $ ./gradlew :ga-tsp:run
+    ```
+* Knapsack Problem (KP) is located at [ga-kp directory](ga-kp/README.md)
+    - Run with:
+    ```sh
+    $ ./gradlew :ga-kp:run
+    ```
 
 License
 -------
