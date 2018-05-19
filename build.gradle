@@ -1,12 +1,15 @@
 buildscript {
-    ext.kotlin_version = '1.2.31'
+
+    ext {
+        kotlinVersion = '1.2.41'
+    }
 
     repositories {
         mavenCentral()
     }
 
     dependencies {
-        classpath "org.jetbrains.kotlin:kotlin-gradle-plugin:$kotlin_version"
+        classpath "org.jetbrains.kotlin:kotlin-gradle-plugin:$kotlinVersion"
     }
 }
 
@@ -20,13 +23,20 @@ subprojects {
         mavenCentral()
     }
 
-    dependencies {
-        compile "org.jetbrains.kotlin:kotlin-stdlib-jdk8:$kotlin_version"
-        compile 'com.google.code.gson:gson:2.8.4'
-        compile 'ch.qos.logback:logback-classic:1.2.3'
+    ext {
+        assertjVersion  = '3.10.0'
+        gsonVersion     = '2.8.4'
+        junitVersion    = '4.12'
+        logbackVersion  = '1.2.3'
+    }
 
-        testCompile "junit:junit:4.12"
-        testCompile "org.assertj:assertj-core:3.10.0"
+    dependencies {
+        compile "org.jetbrains.kotlin:kotlin-stdlib-jdk8:$kotlinVersion"
+        compile "com.google.code.gson:gson:$gsonVersion"
+        compile "ch.qos.logback:logback-classic:$logbackVersion"
+
+        testCompile "junit:junit:$junitVersion"
+        testCompile "org.assertj:assertj-core:$assertjVersion"
     }
 
     compileKotlin {
