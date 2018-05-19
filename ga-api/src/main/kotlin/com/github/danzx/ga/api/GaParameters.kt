@@ -1,6 +1,6 @@
 package com.github.danzx.ga.api
 
-data class GaParameters<out P: Population<*>>(
+open class GaParameters<out P: Population<*>>(
         val tournamentSize: Int,
         val numberOfGenerations: Int,
         val firstGeneration: P,

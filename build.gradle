@@ -24,10 +24,11 @@ subprojects {
     }
 
     ext {
-        assertjVersion  = '3.10.0'
-        gsonVersion     = '2.8.4'
-        junitVersion    = '4.12'
-        logbackVersion  = '1.2.3'
+        assertjVersion     = '3.10.0'
+        gsonVersion        = '2.8.4'
+        junitVersion       = '4.12'
+        junitParamsVersion = '1.1.1'
+        logbackVersion     = '1.2.3'
     }
 
     dependencies {
@@ -36,6 +37,7 @@ subprojects {
         compile "ch.qos.logback:logback-classic:$logbackVersion"
 
         testCompile "junit:junit:$junitVersion"
+        testCompile "pl.pragmatists:JUnitParams:$junitParamsVersion"
         testCompile "org.assertj:assertj-core:$assertjVersion"
     }
 

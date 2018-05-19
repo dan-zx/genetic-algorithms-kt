@@ -2,7 +2,7 @@ package com.github.danzx.ga.tsp
 
 import com.github.danzx.ga.api.Chromosome
 
-class RouteChromosome(initialCapacity: Int = 10) : Chromosome<PointGene>(initialCapacity = initialCapacity) {
+class RouteChromosome: Chromosome<PointGene>() {
 
     override fun copy(): RouteChromosome {
         val clone = RouteChromosome()

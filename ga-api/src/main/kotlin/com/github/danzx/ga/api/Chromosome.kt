@@ -2,9 +2,9 @@ package com.github.danzx.ga.api
 
 import java.util.Collections
 
-abstract class Chromosome<G: Gene>(initialCapacity: Int = 10) : Iterable<G> {
+abstract class Chromosome<G: Gene> : Iterable<G> {
 
-    private var genes = ArrayList<G>(initialCapacity)
+    protected var genes = ArrayList<G>()
 
     val size
         get() = genes.size
@@ -15,7 +15,7 @@ abstract class Chromosome<G: Gene>(initialCapacity: Int = 10) : Iterable<G> {
     abstract val fitnessValue: Double
     abstract fun copy() : Chromosome<G>
 
-    override fun toString() =  """{ "genes": ${genes}, "fitnessValue": $fitnessValue }"""
+    override fun toString() =  """{ "genes": $genes, "fitnessValue": $fitnessValue }"""
 
     fun clear() = genes.clear()
     fun shuffle() = genes.shuffle()
@@ -25,15 +25,15 @@ abstract class Chromosome<G: Gene>(initialCapacity: Int = 10) : Iterable<G> {
     operator fun contains(element: G) = genes.contains(element)
     operator fun get(index: Int) = genes[index]
 
-    operator fun set(index: Int, element: G) {
+    open operator fun set(index: Int, element: G) {
         genes[index] = element
     }
 
-    operator fun plusAssign(element: G) {
+    open operator fun plusAssign(element: G) {
         genes.add(element)
     }
 
-    operator fun minusAssign(element: G) {
+    open operator fun minusAssign(element: G) {
         genes.remove(element)
     }
 }
