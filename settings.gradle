@@ -1,2 +1,3 @@
 rootProject.name = 'ga'
-include 'ga-api', 'ga-tsp'
+include 'ga-api', 'ga-tsp', 'ga-kp'
+
