@@ -13,7 +13,7 @@ class PopulationTest {
     fun `should sort chromosomes by fitness value asc`() {
         assertThat(testPopulation.size).isEqualTo(4)
         assertThat(testPopulation.isEmpty).isFalse()
-        assertThat(testPopulation.map { it.fitnessValue }).isSorted.containsExactly(14.0, 20.0, 20.0, 23.0)
+        assertThat(testPopulation.map { it.fitnessValue }).isSorted().containsExactly(14.0, 20.0, 20.0, 23.0)
         assertThat(testPopulation.fittestFrom(TOP)).isEqualTo(testChromosomes[0])
         assertThat(testPopulation.fittestFrom(BOTTOM)).isEqualTo(testChromosomes[1])
     }
@@ -63,7 +63,9 @@ class PopulationTest {
             get() = sumByDouble { it.value.toDouble() }
 
         override fun copy(): TestChromosome {
-            TODO("not implemented")
+            val clone = TestChromosome()
+            forEach { clone += it.copy() }
+            return clone
         }
     }
 
