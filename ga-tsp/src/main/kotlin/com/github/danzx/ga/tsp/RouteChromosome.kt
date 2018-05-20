@@ -20,8 +20,4 @@ class RouteChromosome: Chromosome<PointGene>() {
             }
             return travelDistance
         }
-
-    fun addCityAt(x: Int, y: Int) {
-        this += PointGene(x, y)
-    }
 }

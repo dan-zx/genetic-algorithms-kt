@@ -7,8 +7,8 @@ import com.github.danzx.ga.api.util.random
 class KpParameters(tournamentSize: Int,
                    numberOfGenerations: Int,
                    private val items: List<ItemGene>,
-                   private val populationsOf: Int,
-                   private val backpackWeightLimit: Double,
+                   populationsOf: Int,
+                   backpackWeightLimit: Double,
                    numberOfParentsForCrossover: Int = 2,
                    mutationRate: Double = 0.0,
                    useElitism: Boolean = false):

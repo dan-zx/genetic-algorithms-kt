@@ -1,11 +1,9 @@
 package com.github.danzx.ga.tsp
 
 import com.github.danzx.ga.api.BaseGaProblem
-import com.github.danzx.ga.api.GaParameters
-import com.github.danzx.ga.api.Population
 import com.github.danzx.ga.api.util.random
 
-class TravelingSalesmanProblem(parameters: GaParameters<Population<RouteChromosome>>) : BaseGaProblem<RouteChromosome>(parameters) {
+class TravelingSalesmanProblem(parameters: TspParameters) : BaseGaProblem<RouteChromosome>(parameters) {
 
     override fun mutate(chromosome: RouteChromosome, mutationRate: Double) {
         chromosome.forEachIndexed { index, _ ->
