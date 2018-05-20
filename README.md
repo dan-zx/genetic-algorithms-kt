@@ -9,7 +9,7 @@ General API classes
 The API is is located at [ga-api directory](ga-api)
 
 * `Gene` is marker interface. Elements of the complete solution should implement this interface.
-* A `Chromosome` is a posible solution of the problem. The `fitnessValue` indicates how good or bad is the solution.
+* A `Chromosome` is a possible solution of the problem. The `fitnessValue` indicates how good or bad is the solution.
 * `GaParameters` are the general parameters of all Genetic Algorithms.
 * `Population` are a collection of chromosomes sorted by their fitness values.
 * `BaseGaProblem` is the base of a Genetic Algorithm and implements the following operators:

@@ -17,7 +17,7 @@ val tsp = TravelingSalesmanProblem(TspParameters(
         // Use points() utility create the first solution
         points = points {
             // Add as many cities as you want in a Cartesian Plane
-            // This cities represent the firs solution that will be used in the GA
+            // This cities represent the first solution that will be used in the GA
             pointAt(x = 60, y = 200)
             // ...
             pointAt(x = 80, y = 180)
