@@ -37,7 +37,7 @@ class TspParameters(tournamentSize: Int,
             val firstGeneration = Population<RouteChromosome>()
             for (i in 1..populationsSize) {
                 val newBackpack = RouteChromosome()
-                for (j in (1 until points.size).shuffled()) newBackpack += points[j]
+                for (j in (0 until points.size).shuffled()) newBackpack += points[j]
                 firstGeneration += newBackpack
             }
             return firstGeneration
